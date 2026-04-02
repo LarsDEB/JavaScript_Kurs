@@ -1,4 +1,4 @@
-let num1 = null;
+ let num1 = null;
 let num2 = null;
 let rechenzeichen = null;
 const rechenzeichenErlaubt = ["+", "-", "*", "/", "**", "%"];
