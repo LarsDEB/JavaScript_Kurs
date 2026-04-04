@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Study Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>📚 Mini Study Dashboard</h1>
+      <p>
+        Hallo, hier kannst du deine Aufgaben organisieren und kleine Lern-Tools testen.
+      </p>
+    </header>
+
+    <main>
+      <!-- Bereich: Aufgaben hinzufügen -->
+      <section class="task-section">
+        <h2>Aufgabe hinzufügen</h2>
+        <input type="text" id="taskInput" placeholder="Deine Aufgabe (z.B. 'Mathe, Aufgabe 1')" />
+        <button id="addTaskBtn">Aufgabe hinzufügen</button>
+      </section>
+
+      <!-- Bereich: Aufgabenliste -->
+      <section class="task-section">
+        <h2>Offene Aufgaben</h2>
+        <button id="deleteAllBtn">Alle Aufgaben löschen</button>
+        <ul id="taskList"></ul>
+      </section>
+
+      <!-- Bereich: Tipp-Button -->
+      <section class="task-section">
+        <h2>Zufälliger Lern‑Tipp</h2>
+        <button id="tipBtn">Tipp anzeigen</button>
+        <div id="tipOutput"></div>
+      </section>
+
+      <!-- Bereich: Farbwechsel -->
+      <section class="task-section">
+        <h2>Design‑Modus</h2>
+        <button id="themeBtn">Dunkles Design an/aus</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Woche 4 – Übungsseite mit HTML/CSS/JS</p>
+    </footer>
+  </body>
+</html>
