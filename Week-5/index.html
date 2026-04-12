@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Planner Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Task Planner Pro</h1>
+      <p>Organisiere deine Aufgaben einfach und flexibel.</p>
+    </header>
+
+    <main>
+      <!-- 2. ADD-TASK: Formular mit Label, Input, Button + Fehlermeldung rechts -->
+      <section class="task-section add-task">
+        <form action="" id="addTaskForm">
+          <label for="taskInput">Aufgabe hinzufügen</label>
+          <input type="text" id="taskInput" placeholder="Deine Aufgabe (z.B. Matheaufgabe 1)" />
+          <div class="error-wrapper">
+            <button id="addTaskBtn" type="submit">Add Task</button>
+            <span id="lengthError" class="invisible">
+              Die Aufgabe muss mindestens drei Zeichen haben!
+            </span>
+          </div>
+        </form>
+      </section>
+
+      <!-- 3. KASTEN: AUFAGEN mit Liste -->
+      <section class="task-section tasks-list">
+        <h2>Aufgaben</h2>
+        <button type="button" id="filterAll" class="filterButton active">
+          Alle (<span>0</span>)
+        </button>
+        <button type="button" id="filterOpen" class="filterButton">Offen (<span>0</span>)</button>
+        <button type="button" id="filterDone" class="filterButton">
+          Erledigt (<span>0</span>)
+        </button>
+        <ul id="taskList">
+          <!-- Hier kommen die Aufgaben per JavaScript rein -->
+        </ul>
+      </section>
+
+      <!-- 4. KASTEN: MOTIVATION -->
+      <section class="task-section motivation">
+        <h2>Motivation</h2>
+        <button id="motivationBtn" type="button">Motivationstipp anzeigen</button>
+        <div id="motivationOutput"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Woche 5 – Übungsseite mit HTML/CSS/JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

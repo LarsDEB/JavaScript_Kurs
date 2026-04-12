@@ -1,0 +1,281 @@
+/* Grundstil */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9fb;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+/* Header (Überschrift) */
+header {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+header p {
+  margin-top: 4px;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Hauptbereich */
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+/* --------------------------------
+   2. ADD‑TASK‑Formular (Aufgabe hinzufügen)
+-------------------------------- */
+
+/* Kasten mit Form */
+.task-section.add-task {
+  background-color: white;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0e0e6;
+}
+
+/* Form innerhalb */
+.add-task form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Label wie h2 */
+.add-task form label {
+  font-size: 1.05rem;
+  color: #1677ff;
+  font-weight: 500;
+}
+
+/* Eingabefeld */
+.add-task form input#taskInput {
+  padding: 10px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: border-color 0.2s;
+}
+
+.add-task form input#taskInput:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Wrapper für Button + Fehlermeldung */
+.add-task form .error-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Fehlermeldung (rot) */
+.add-task form span#lengthError {
+  color: #cc092f;
+  font-size: 0.85rem;
+  letter-spacing: 0.2px;
+}
+
+/* Klasse „invisibile“: Fehler ausblenden */
+.invisible {
+  display: none !important;
+}
+
+/* Submit‑Button */
+.add-task button#addTaskBtn {
+  background-color: #1677ff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.add-task button#addTaskBtn:hover {
+  background-color: #0958d9;
+}
+
+/* --------------------------------
+   3. KASTEN: AUFAGEN (Liste)
+-------------------------------- */
+
+.filterButton {
+  background-color: #ffffff;
+  color: #1677ff;
+  border: 1px solid #1677ff;
+  padding: 7px 12px;
+  margin: 0 4px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.filterButton:hover {
+  background-color: #e6f0ff;
+}
+
+/* Aktiver Filter‑Button */
+.filterButton.active {
+  background-color: #1677ff;
+  color: white;
+  border-color: #1677ff;
+}
+
+.task-section.tasks-list {
+  background-color: white;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0e0e6;
+}
+
+.task-section.tasks-list h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+  color: #1677ff;
+  font-weight: 500;
+}
+
+/* Aufgabenliste */
+ul#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+/* AUfgabe */
+ul#taskList li {
+  padding: 10px 12px 10px 16px;
+  margin-bottom: 6px;
+  background-color: #f6f9ff;
+  border-left: 4px solid #1677ff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  align-items: center;
+  font-size: 0.95rem;
+  transition: background-color 0.15s;
+}
+
+ul#taskList li:hover {
+  background-color: #eef1ff;
+  cursor: pointer;
+}
+
+/* text fills all free space  */
+ul#taskList li span {
+  flex: 1;
+}
+
+/* Erledigte Aufgabe */
+ul#taskList li.done {
+  background-color: #e6f0ff;
+  border-color: #52c41a;
+  color: #52c41a;
+}
+
+#taskList li input[type='checkbox'] {
+  background-color: #52c41a;
+  cursor: pointer;
+  
+}
+
+#taskList li input[type='checkbox']:hover {
+  background-color: #52c41a;
+}
+
+/* Löschen‑Button */
+ul#taskList li button.deleteBtn {
+  padding: 0;
+  font-size: 0.4rem;
+  border: none;
+  border-radius: 4px;
+  cursor: default;
+}
+
+ul#taskList li button.deleteBtn:hover {
+  color: hsl(0, 0%, 32%);
+}
+
+/* --------------------------------
+   4. KASTEN: MOTIVATION
+-------------------------------- */
+
+.task-section.motivation {
+  background-color: #f9fafc;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0e0e6;
+}
+
+.task-section.motivation h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+  color: #1677ff;
+  font-weight: 500;
+}
+
+.task-section.motivation button {
+  background-color: #1677ff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.task-section.motivation button:hover {
+  background-color: #0958d9;
+}
+
+.task-section.motivation #motivationOutput {
+  padding: 8px 10px;
+  background-color: #f0f5ff;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #434343;
+}
+
+/* --------------------------------
+   5. FOOTER
+-------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #8c8c8c;
+  font-size: 0.85rem;
+  background-color: #fafbfc;
+  border-top: 1px solid #e0e0e6;
+}
